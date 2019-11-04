@@ -1,5 +1,5 @@
 resource "packet_reserved_ip_block" "metal_lb_ips" {
-    project_id = "${packet_project.master_project.id}"
+    project_id = "${packet_project.new_project.id}"
     facility = "${var.facility}"
     quantity = "${var.metal_lb_ip_count}"
 }
@@ -18,7 +18,7 @@ resource "packet_device" "k8s_workers" {
     facilities       = ["${var.facility}"]
     operating_system = "${var.k8s_os}"
     billing_cycle    = "${var.billing_cycle}"
-    project_id       = "${packet_project.master_project.id}"
+    project_id       = "${packet_project.new_project.id}"
     user_data        = "${data.template_file.worker_user_data.rendered}"
 }
 

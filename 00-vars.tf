@@ -4,6 +4,9 @@ variable "auth_token" {
 variable "organization_id" {
 }
 
+variable "bgp_password" {
+}
+
 variable "cluster_name" {
   default = "go-k8s"
 }
@@ -41,8 +44,6 @@ variable "metal_lb_ip_count" {
     default = 1
 }
 
-variable "bgp_password" {
-}
-
 variable "bgp_asn" {
+    default = 65000
 }
