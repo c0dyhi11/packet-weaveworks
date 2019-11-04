@@ -1,0 +1,25 @@
+#  Local .terraform directories
+*/.terraform
+**/.terraform
+
+# .tfstate files
+*/*.tfstate
+*/*.tfstate.*
+**/*.tfstate
+**/*.tfstate.*
+
+# .tfvars files
+*/*.tfvars
+**/*.tfvars
+
+# vscode files
+*/.vscode
+**/.vscode 
+
+# python virtual envs
+*/venv
+**/venv
+
+# terraform overrides
+*/override*
+**/override*
